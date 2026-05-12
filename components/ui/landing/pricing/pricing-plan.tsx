@@ -1,7 +1,7 @@
 import { VerifiedCheck } from "@solar-icons/react-perf/category/style/LineDuotone";
-import { Button } from "../../manual/button";
 import { Magnifier } from "@solar-icons/react-perf/LineDuotone";
 import { cn } from "@/lib/utils";
+import { Button } from "../../manual/button";
 
 export type PricingItem = {
     id: number;

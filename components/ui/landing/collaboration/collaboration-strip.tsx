@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { Marquee } from "../../manual/marquee"
+import { Marquee } from "../../marquee"
 const reviews = [
   {
     id: `1`,
