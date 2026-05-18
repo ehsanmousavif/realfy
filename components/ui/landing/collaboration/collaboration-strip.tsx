@@ -85,7 +85,7 @@ const ReviewCard = ({
 export function CollaborationStrip() {
   return (
     <div className="relative flex w-full flex-col items-center justify-center overflow-hidden mx-auto mt-24 md:mt-40">
-      <Marquee pauseOnHover>
+      <Marquee pauseOnHover className="[--duration:50s]">
         {firstRow.map((review) => (
           <ReviewCard key={review.jobTitle} {...review} />
         ))}
