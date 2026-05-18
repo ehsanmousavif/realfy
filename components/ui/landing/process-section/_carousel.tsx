@@ -1,11 +1,16 @@
 "use client";
+
+import Image from "next/image";
+
+
 import {
+  Carousel,
   CarouselContent,
   CarouselItem,
-  Carousel,
 } from "@/components/ui/manual/carousel";
-import Image from "next/image";
+
 import { AspectRatio } from "@/components/ui/manual/aspect-ratio";
+import { Bookmark, Share } from "@solar-icons/react-perf/category/style/Bold";
 
 const images = [
   "/images/landing/short-1.jpg",
@@ -14,12 +19,11 @@ const images = [
   "/images/landing/pic-4.jpg",
   "/images/landing/short-4.jpg",
 ];
-
-export default function Carousell() {
-  const displayImages = [...images, ...images, ...images];
+export default function CarouselSection() {
+  const items = [...images, ...images, ...images];
 
   return (
-    <div className="w-full relative">
+    <section className="relative w-full">
       <Carousel
         opts={{
           align: "start",
@@ -28,29 +32,38 @@ export default function Carousell() {
         }}
         className="w-full"
       >
-        <CarouselContent className="flex -ml-2 md:-ml-4">
-          {displayImages.map((src, index) => (
+        <CarouselContent className="-ml-4">
+          {items.map((src, index) => (
             <CarouselItem
               key={index}
-              className="min-w-0 pl-2 md:pl-4 flex-[0_0_40%] md:flex-[0_0_20%]"
+              className="pl-4 basis-[40%] md:basis-[20%]"
             >
-              <div className="relative overflow-hidden rounded-xl">
+              <div className="group relative overflow-hidden rounded-2xl">
                 <AspectRatio ratio={9 / 16}>
                   <Image
                     src={src}
                     alt={`image-${index}`}
                     fill
-                    className="object-cover"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </AspectRatio>
+                <div className="absolute bottom-0 right-0 flex items-center justify-center gap-3 bg-linear-to-t from-black/80 via-black/30 to-transparent p-4 opacity-0 transition-all duration-300 group-hover:opacity-100 ">
+                  <button className="flex size-10 items-center justify-center rounded-full bg-white/10 backdrop-blur-md transition hover:bg-white/20">
+                    <Bookmark className="size-5 text-white" />
+                  </button>
+
+                  <button className="flex size-10 items-center justify-center rounded-full bg-white/10 backdrop-blur-md transition hover:bg-white/20">
+                    <Share className="size-5 text-white" />
+                  </button>
+                </div>
               </div>
             </CarouselItem>
           ))}
         </CarouselContent>
 
-        <div className="from-black pointer-events-none absolute inset-y-0 left-0 w-1/5 md:w-1/4 bg-gradient-to-r"></div>
-        <div className="from-black pointer-events-none absolute inset-y-0 right-0 w-1/5 md:w-1/4 bg-gradient-to-l"></div>
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-linear-to-r from-black to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-linear-to-l from-black to-transparent" />
       </Carousel>
-    </div>
+    </section>
   );
 }
