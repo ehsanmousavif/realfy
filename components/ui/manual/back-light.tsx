@@ -6,13 +6,13 @@ type BacklightProps = {
     blur?: number
 }
 
-export function Backlight({ blur = 20, children, className }: BacklightProps) {
+export function Backlight({ blur, children, className }: BacklightProps) {
     const id = useId()
 
     return (
         <div className={className}>
             <svg width="0" height="0" aria-hidden="true">
-                <filter id={id} y="-50%" x="-50%" width="200%" height="200%">
+                <filter id={id} y="-50%" width="200%" height="200%">
                     <feGaussianBlur
                         in="SourceGraphic"
                         stdDeviation={blur}
@@ -27,7 +27,7 @@ export function Backlight({ blur = 20, children, className }: BacklightProps) {
                 </filter>
             </svg>
 
-            <div style={{ filter: `url(#${id})` }}>{children}</div>
+            <div className={`shadow-xl shadow-${blur}`} style={{ filter: `url(#${id})` }}>{children}</div>
         </div>
     )
 }

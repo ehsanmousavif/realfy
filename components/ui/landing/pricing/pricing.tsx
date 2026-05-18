@@ -1,5 +1,6 @@
 import { DollarMinimalistic } from "@solar-icons/react-perf/category/style/LineDuotone";
 import PricingSection, { PricingItem } from "./pricing-plan";
+import { IconUpper } from "../../root/icon-upper-sections";
 
 export const pricingData: PricingItem[] = [
     {
@@ -82,10 +83,8 @@ export const pricingData: PricingItem[] = [
 export function Pricing() {
 
     return <div className="mt-30 justify-center gap-8 px-4 w-full flex flex-col items-center max-w-7xl mx-auto">
-        <div className="rounded-full bg-accent text-foreground/70 px-3 py-2 flex items-center gap-2">
-            <DollarMinimalistic className='w-6 h-6' />
-            <p>Pricing</p>
-        </div>
+        <IconUpper title="Pricing" icon={<DollarMinimalistic className='w-6 h-6' />
+        } />
         <span className="text-2xl md:text-4xl -mt-4 font-bold text-center">Choose your plane</span>
         <PricingSection pricingData={pricingData} />
     </div>

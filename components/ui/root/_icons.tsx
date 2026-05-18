@@ -1,12 +1,31 @@
 export const LinkedIn = () => {
-    return <svg xmlns="http://www.w3.org/2000/svg" width={40} height={40} viewBox="0 0 128 128"><path fill="#fff" d="M.85 51.73h4.94v17.98h9.14v4.56H.85zM17.11 59h4.74v15.26h-4.74zm2.37-7.59a2.75 2.75 0 1 1-2.75 2.75a2.75 2.75 0 0 1 2.75-2.75m22.21.32h4.74V65.2l5.38-6.22h5.81l-6.22 7.07l6.09 8.22h-5.96l-5.04-7.55h-.06v7.55h-4.74zM24.48 59H29v2.09h.06a5 5 0 0 1 4.49-2.47c4.81 0 5.69 3.16 5.69 7.27v8.38h-4.7v-7.43c0-1.77 0-4-2.47-4s-2.85 1.93-2.85 3.92v7.55h-4.74z" strokeWidth={1} stroke="#fff"></path><path fill="#fff" d="M67.61 24.85a2.84 2.84 0 0 0-2.91-2.91a3.16 3.16 0 0 0-3.35 2.91zm4 6.77a8.35 8.35 0 0 1-6.48 3c-4.74 0-8.54-3.16-8.54-8.07s3.8-8.06 8.54-8.06c4.43 0 7.21 3.16 7.21 8.06v1.49h-11a3.54 3.54 0 0 0 3.57 3a4 4 0 0 0 3.38-1.87zm10.62-8.94A3.89 3.89 0 1 0 86 66.57a3.6 3.6 0 0 0-3.8-3.89m8.2 11.58H86v-2a6 6 0 0 1-4.71 2.4c-4.56 0-7.56-3.29-7.56-7.94c0-4.27 2.66-8.19 7-8.19a5.73 5.73 0 0 1 4.87 2h.06v-8.8h4.74zM124.6 47H97.36A2.33 2.33 0 0 0 95 49.34v27.35A2.33 2.33 0 0 0 97.36 79h27.24a2.34 2.34 0 0 0 2.4-2.31V49.34a2.34 2.34 0 0 0-2.4-2.34m-20.12 27.27h-4.74V59h4.74zm-2.37-17.34a2.75 2.75 0 1 1 2.75-2.75a2.75 2.75 0 0 1-2.75 2.75m20.13 17.34h-4.74v-7.42c0-1.77 0-4-2.46-4s-2.85 1.93-2.85 3.92v7.55h-4.74V59H112v2.1h.06a5 5 0 0 1 4.49-2.46c4.8 0 5.69 3.16 5.69 7.27z" strokeWidth={1} stroke="#fff"></path></svg>
+    return <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24">
+        <path d="M0 0h24v24H0z" fill="none" />
+        <path fill="currentColor" d="M4.75 1.875a2.125 2.125 0 1 0 0 4.25a2.125 2.125 0 0 0 0-4.25m-2 6A.125.125 0 0 0 2.625 8v13c0 .069.056.125.125.125h4A.125.125 0 0 0 6.875 21V8a.125.125 0 0 0-.125-.125zm6.5 0A.125.125 0 0 0 9.125 8v13c0 .069.056.125.125.125h4a.125.125 0 0 0 .125-.125v-7a1.875 1.875 0 1 1 3.75 0v7c0 .069.056.125.125.125h4a.125.125 0 0 0 .125-.125v-8.62c0-2.427-2.11-4.325-4.525-4.106a7.2 7.2 0 0 0-2.169.548l-1.306.56V8a.125.125 0 0 0-.125-.125z" />
+    </svg>
 }
 export const Instagram = () => {
     return <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24"><path fill="#fff" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3" strokeWidth={0.4} stroke="#fff"></path></svg>
 }
 export const YouTube = () => {
-    return <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24"><defs><mask id="SVGLjAFPeSy"><path fill="#fff" fillOpacity={0} stroke="#fff" strokeDasharray={60} strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 5c9 0 9 0 9 7c0 7 0 7 -9 7c-9 0 -9 0 -9 -7c0 -7 0 -7 9 -7Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.6s" values="60;0"></animate><animate fill="freeze" attributeName="fill-opacity" begin="0.6s" dur="0.4s" to={1}></animate></path><path d="M10 8.5l6 3.5l-6 3.5Z" opacity={0}><set fill="freeze" attributeName="opacity" begin="1.1s" to={1}></set><animate fill="freeze" attributeName="d" begin="1.1s" dur="0.2s" values="M12 11l0 1l0 1Z;M10 8.5l6 3.5l-6 3.5Z"></animate></path></mask></defs><path fill="#fff" d="M0 0h24v24H0z" mask="url(#SVGLjAFPeSy)"></path></svg>
+    return <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24">
+        <path d="M0 0h24v24H0z" fill="none" />
+        <path fill="currentColor" d="m10 15l5.19-3L10 9zm11.56-7.83c.13.47.22 1.1.28 1.9c.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83c-.25.9-.83 1.48-1.73 1.73c-.47.13-1.33.22-2.65.28c-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44c-.9-.25-1.48-.83-1.73-1.73c-.13-.47-.22-1.1-.28-1.9c-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83c.25-.9.83-1.48 1.73-1.73c.47-.13 1.33-.22 2.65-.28c1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44c.9.25 1.48.83 1.73 1.73" />
+    </svg>
+
 }
 export const Twitter = () => {
-    return <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 16 16"><path fill="#fff" d="M9.294 6.928L14.357 1h-1.2L8.762 6.147L5.25 1H1.2l5.31 7.784L1.2 15h1.2l4.242-5.436L10.751 15h4.05zM7.651 8.852l-.538-.775L2.832 1.91h1.843l3.454 4.977l.538.775l4.491 6.47h-1.843z" strokeWidth={0.4} stroke="#fff"></path></svg>
+    return <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 14 14">
+        <path d="M0 0h14v14H0z" fill="none" />
+        <g fill="none">
+            <g clip-path="url(#SVGG1Ot4cAD)">
+                <path fill="currentColor" d="M11.025.656h2.147L8.482 6.03L14 13.344H9.68L6.294 8.909l-3.87 4.435H.275l5.016-5.75L0 .657h4.43L7.486 4.71zm-.755 11.4h1.19L3.78 1.877H2.504z" />
+            </g>
+            <defs>
+                <clipPath id="SVGG1Ot4cAD">
+                    <path fill="#fff" d="M0 0h14v14H0z" />
+                </clipPath>
+            </defs>
+        </g>
+    </svg>
 }

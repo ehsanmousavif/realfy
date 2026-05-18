@@ -34,7 +34,7 @@ export default function Carousell() {
               key={index}
               className="min-w-0 pl-2 md:pl-4 flex-[0_0_40%] md:flex-[0_0_20%]"
             >
-              <div className="relative overflow-hidden rounded-xl border bg-muted ">
+              <div className="relative overflow-hidden rounded-xl">
                 <AspectRatio ratio={9 / 16}>
                   <Image
                     src={src}
@@ -48,8 +48,8 @@ export default function Carousell() {
           ))}
         </CarouselContent>
 
-        <div className="from-black pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r"></div>
-        <div className="from-black pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l"></div>
+        <div className="from-black pointer-events-none absolute inset-y-0 left-0 w-1/5 md:w-1/4 bg-gradient-to-r"></div>
+        <div className="from-black pointer-events-none absolute inset-y-0 right-0 w-1/5 md:w-1/4 bg-gradient-to-l"></div>
       </Carousel>
     </div>
   );

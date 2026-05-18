@@ -3,7 +3,7 @@ import { Geist_Mono, Nunito_Sans } from "next/font/google"
 import "./globals.css"
 import { cn } from "@/lib/utils"
 import { ThemeProvider } from "@/components/theme-provider"
-import { Menu } from "@/components/ui/root/menu-top"
+import { Menu } from "@/components/ui/root/menu"
 import { Footer } from "@/components/ui/root/footer"
 
 const nunitoSans = Nunito_Sans({ subsets: ["latin"], variable: "--font-sans" })
@@ -29,12 +29,12 @@ export default function RootLayout({
         nunitoSans.variable
       )}
     >
-      <body className="w-full min-h-screen bg-black">
+      <body className="w-full min-h-screen max-w-full  mx-autos bg-black relative">
         <ThemeProvider>
           <Menu />
-          <div className="relative z-0">
+          <div>
             {children}
-          </div>s
+          </div>
           <Footer />
         </ThemeProvider>
 

@@ -5,8 +5,9 @@ import useEmblaCarousel from "embla-carousel-react";
 import Image from "next/image";
 import React from "react";
 import {
-    RoundArrowLeft,
-    RoundArrowRight,
+    ArrowLeft,
+    ArrowRight,
+
 } from "@solar-icons/react-perf/LineDuotone";
 import { Backlight } from "../../manual/back-light";
 
@@ -50,61 +51,54 @@ export function Carousel({ images }: PropType) {
     };
 
     return (
-        <div className="p-8">
-            <div className="w-full relative">
-                <div
-                    onClick={() => scroll("prev")}
-                    className="absolute left-45 top-1/2 z-10 hidden md:block"
-                >
-                    <RoundArrowLeft className="w-8 h-8" />
-                </div>
+        <div className="w-full relative">
+            <div
+                onClick={() => scroll("prev")}
+                className="absolute left-45 top-1/2 z-10 hidden md:block"
+            >
+                <ArrowLeft className="w-8 h-12 bg-accent opacity-70 rounded-full p-2" />
+            </div>
 
-                <div
-                    onClick={() => scroll("next")}
-                    className="absolute right-45 top-1/2 z-10 hidden md:block"
-                >
-                    <RoundArrowRight className="w-8 h-8" />
-                </div>
+            <div
+                onClick={() => scroll("next")}
+                className="absolute right-45 top-1/2 z-10 hidden md:block"
+            >
+                <ArrowRight className="w-8 h-12 bg-accent opacity-70 rounded-full p-2" />
+            </div>
 
-                <div ref={emblaRef} className="overflow-hidden rounded-2xl">
-                    <div className="flex ">
-                        {images.map((image, index) => {
-                            const distance = Math.abs(index - selectedIndex);
-                            const isCenter = distance === 0;
+            <div ref={emblaRef} className="overflow-hidden rounded-2xl">
+                <div className="flex ">
+                    {images.map((image, index) => {
+                        const distance = Math.abs(index - selectedIndex);
+                        const isCenter = distance === 0;
 
-                            return (
+                        return (
+                            <div
+                                key={index}
+                                className="flex-[0_0_70%] md:flex-[0_0_60%] flex items-center justify-center"
+                            >
                                 <div
-                                    key={index}
-                                    className="flex-[0_0_70%] md:flex-[0_0_60%] flex items-center justify-center"
+                                    className={cn("w-full transition-all duration-500 ease-out")}
+                                    style={{
+                                        transform: `scale(${isCenter ? 1 : 0.95})`,
+                                        opacity: isCenter ? 1 : 0.4,
+                                    }}
                                 >
-                                    <div
-                                        className={cn(
-                                            "w-full transition-all duration-500 ease-out",
-                                        )}
-                                        style={{
-                                            transform: `scale(${isCenter ? 1 : 0.88})`,
-                                            opacity: isCenter ? 1 : 0.3,
-                                        }}
-                                    >
-                                        <div
-                                            className={`relative w-full aspect-video rounded-xl overflow-hidden ${isCenter ? " shadow-[0_80px_30px_rgba(0,0,0,0,1)] shadow-accent" : "shadow-lg"}`}
-                                        >
-                                            <Backlight blur={50}>
-                                                <Image
-                                                    src={image}
-                                                    alt={`Slide ${index + 1}`}
-                                                    width={800}
-                                                    height={450}
-                                                    className="object-center"
-                                                    priority={index === 0}
-                                                />
-                                            </Backlight>
+                                    <Backlight blur={10} className="">
+                                        <div className="my-16 w-full shadow-xl/30 shadow-black/40 max-w-200 aspect-video rounded-xl md:max-h-150">
+                                            <Image
+                                                src={image}
+                                                alt={`Slide ${index + 1}`}
+                                                fill
+                                                className="object-cover rounded-2xl"
+                                                priority={index === 0}
+                                            />
                                         </div>
-                                    </div>
+                                    </Backlight>
                                 </div>
-                            );
-                        })}
-                    </div>
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
         </div>
