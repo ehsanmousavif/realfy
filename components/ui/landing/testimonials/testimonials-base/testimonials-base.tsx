@@ -1,5 +1,5 @@
-import { Marquee } from "@/components/ui/component/magic-ui/marquee";
 import Image from "next/image";
+import { Marquee } from "../../component/magic-ui/marquee";
 
 type Props = {
   images: string[];

@@ -1,9 +1,9 @@
 
 import { NoEntryIcon, PayPal, TickIcon } from "./_icon";
 import Image from "next/image";
-import { Separator } from "../../component/shadcn/separator";
 import { IconUpper } from "../../root/icon-upper-sections";
-import { AccordionItem, AccordionTrigger, AccordionContent, Accordion } from "../../component/shadcn/accordion";
+import { AccordionItem, AccordionTrigger, AccordionContent, Accordion } from "../component/shadcn/accordion"
+import { Separator } from "../component/shadcn/separator";
 
 const items = [
   {

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Marquee } from "../../component/magic-ui/marquee";
+import { Marquee } from "../component/magic-ui/marquee";
 const reviews = [
   {
     id: `1`,

@@ -1,7 +1,7 @@
 import { Magnifier } from "@solar-icons/react-perf/LineDuotone";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import { Button } from "../../component/shadcn/button";
+import { Button } from "../component/shadcn/button";
 
 export type PricingItem = {
   id: number;

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Play } from "@solar-icons/react-perf/category/style/Bold";
-import { Button } from "../../component/shadcn/button";
+import { Button } from "../component/shadcn/button";
 // import { PlayCircle } from '@solar-icons/react'
 
 export function IntroductionVideo() {

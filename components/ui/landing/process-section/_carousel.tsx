@@ -3,14 +3,11 @@
 import Image from "next/image";
 
 
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from "@/components/ui/component/shadcn/carousel";
 
-import { AspectRatio } from "@/components/ui/component/shadcn/aspect-ratio";
+
 import { Bookmark, Share } from "@solar-icons/react-perf/category/style/Bold";
+import { Carousel, CarouselContent, CarouselItem } from "../component/shadcn/carousel";
+import { AspectRatio } from "../component/shadcn/aspect-ratio";
 
 const images = [
   "/images/landing/old-man.png",

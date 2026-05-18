@@ -1,15 +1,10 @@
-import { Button } from "../../component/shadcn/button";
-import { FieldLabel, FieldSet } from "../../component/shadcn/field";
-import { Input } from "../../component/shadcn/input";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "../../component/shadcn/select";
-import { Textarea } from "../../component/shadcn/textarea";
+
 import { IconUpper } from "../../root/icon-upper-sections";
+import { Button } from "../component/shadcn/button";
+import { FieldLabel, FieldSet } from "../component/shadcn/field";
+import { Input } from "../component/shadcn/input";
+import { SelectTrigger, Select, SelectContent, SelectItem, SelectValue, } from "../component/shadcn/select";
+import { Textarea } from "../component/shadcn/textarea";
 
 const projectFields = [
   {
