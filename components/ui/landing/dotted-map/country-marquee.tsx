@@ -1,5 +1,5 @@
 import { AlgeriaFlagIcon, ArgFlagIcon, AzFlagIcon, CanadianFlagIcon, DenFlagIcon, GeorgiaFlagIcon, IndiaFlagIcon, IranFlagIcon, IraqFlagIcon, ItalyFlagIcon, MoroccoFlagIcon, SpainFlagIcon, SwiFlagIcon, TurkeyFlagIcon, UsFlagIcon } from "@/components/icons/flags-icons";
-import { Marquee } from "../../marquee";
+import { Marquee } from "../../component/marquee";
 
 
 export function CountryMarquee() {

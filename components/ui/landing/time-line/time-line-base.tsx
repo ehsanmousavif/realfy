@@ -12,7 +12,7 @@ export function TimeLineBase({ data }: Props) {
   return (
     <div className="relative max-w-5xl mx-auto">
       <div className="absolute left-0 right-0 top-0 bottom-0 z-10 pointer-events-none">
-        <div className="sticky h-[60dvh] md:h-[50dvh] top-0 left-7.5 lg:left-1/2 w-1 bg-linear-to-b from-transparent via-foreground/60 to-emerald-600 lg:-translate-x-1/2 rounded-full" />
+        <div className="sticky h-[20%] top-0 left-7.5 lg:left-1/2 w-1 bg-linear-to-b from-transparent via-foreground/60 to-emerald-600 lg:-translate-x-1/2 rounded-full" />
       </div>
       <div className="flex flex-col w-full relative z-20">
         {data.map((d, index) => {
@@ -26,7 +26,7 @@ export function TimeLineBase({ data }: Props) {
                 {!isLast && <div className="w-0.5 flex-1 bg-foreground/20" />}
               </div>
               <div
-                className={`flex w-full ${isLast ? "pb-0" : "pb-20"} min-h-[32px]`}
+                className={`flex w-full ${isLast ? "pb-0" : "pb-20"} min-h-8`}
               >
                 <div className="hidden lg:flex w-1/2 pr-16 justify-end pt-1">
                   {!isEven && (

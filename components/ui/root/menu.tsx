@@ -1,4 +1,4 @@
-import { Button } from "../manual/button";
+import { Button } from "../component/button";
 
 
 export const menuItems = [

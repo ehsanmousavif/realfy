@@ -1,9 +1,10 @@
-import { Marquee } from "@/components/ui/marquee";
+import { Marquee } from "@/components/ui/component/marquee";
 import Image from "next/image";
 
 type Props = {
   images: string[];
 };
+
 
 export function Testimonials({ images }: Props) {
   const Row = images.slice(0, Math.ceil(images.length / 2));

@@ -1,5 +1,5 @@
-import Image from "next/image"
-import { Marquee } from "../../marquee"
+import Image from "next/image";
+import { Marquee } from "../../component/marquee";
 const reviews = [
   {
     id: `1`,
@@ -43,21 +43,20 @@ const reviews = [
     jobDescription: "Video project",
     img: "/images/landing/mf.png",
   },
+];
 
-]
-
-const firstRow = reviews
+const firstRow = reviews;
 
 const ReviewCard = ({
   img,
   jobDescription,
   jobTitle,
-  id
+  id,
 }: {
-  img: string
-  jobDescription: string
-  jobTitle: string
-  id: string
+  img: string;
+  jobDescription: string;
+  jobTitle: string;
+  id: string;
 }) => {
   return (
     <div key={id} className="flex items-center gap-4 p-4 ">
@@ -71,13 +70,17 @@ const ReviewCard = ({
           />
         </div>
         <div className="flex min-w-0 flex-col">
-          <span className="truncate text-sm font-bold sm:text-base">{jobTitle}</span>
-          <span className="truncate text-xs text-muted-foreground sm:text-sm">{jobDescription}</span>
+          <span className="truncate text-sm font-bold sm:text-base">
+            {jobTitle}
+          </span>
+          <span className="truncate text-xs text-muted-foreground sm:text-sm">
+            {jobDescription}
+          </span>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export function CollaborationStrip() {
   return (
@@ -88,6 +91,7 @@ export function CollaborationStrip() {
         ))}
       </Marquee>
       <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-linear-to-r from-black to-transparent" />
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-linear-to-l from-black to-transparent" />    </div>
-  )
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-linear-to-l from-black to-transparent" />{" "}
+    </div>
+  );
 }

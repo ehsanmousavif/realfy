@@ -1,7 +1,7 @@
 "use client";
 
 const images = [
-  "/images/landing/wall.webp",
+  "/images/landing/wall.jpg",
   "/images/landing/pic-1.jpg",
   "/images/landing/pic-2.webp",
 ];

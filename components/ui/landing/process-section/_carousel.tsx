@@ -7,17 +7,17 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-} from "@/components/ui/manual/carousel";
+} from "@/components/ui/component/carousel";
 
-import { AspectRatio } from "@/components/ui/manual/aspect-ratio";
+import { AspectRatio } from "@/components/ui/component/aspect-ratio";
 import { Bookmark, Share } from "@solar-icons/react-perf/category/style/Bold";
 
 const images = [
-  "/images/landing/short-1.jpg",
-  "/images/landing/short-2.png",
+  "/images/landing/old-man.png",
   "/images/landing/short-3.jpg",
-  "/images/landing/pic-4.jpg",
+  "/images/landing/pic-4.webp",
   "/images/landing/short-4.jpg",
+  "/images/landing/pic-4.webp",
 ];
 export default function CarouselSection() {
   const items = [...images, ...images, ...images];
@@ -47,7 +47,7 @@ export default function CarouselSection() {
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </AspectRatio>
-                <div className="absolute bottom-0 right-0 flex items-center justify-center gap-3 bg-linear-to-t from-black/80 via-black/30 to-transparent p-4 opacity-0 transition-all duration-300 group-hover:opacity-100 ">
+                <div className="absolute bottom-0 right-0 flex items-center justify-center gap-3 bg-linear-to-t to-transparent p-4 opacity-0 transition-all duration-300 group-hover:opacity-100 ">
                   <button className="flex size-10 items-center justify-center rounded-full bg-white/10 backdrop-blur-md transition hover:bg-white/20">
                     <Bookmark className="size-5 text-white" />
                   </button>

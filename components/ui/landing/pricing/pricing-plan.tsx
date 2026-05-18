@@ -1,8 +1,6 @@
-import { VerifiedCheck } from "@solar-icons/react-perf/category/style/LineDuotone";
 import { Magnifier } from "@solar-icons/react-perf/LineDuotone";
 import { cn } from "@/lib/utils";
-import { Button } from "../../manual/button";
-import { style } from "motion/react-client";
+import { Button } from "../../component/button";
 import Image from "next/image";
 
 export type PricingItem = {
@@ -30,8 +28,8 @@ export default function PricingSection({ pricingData }: PricingSectionProps) {
               x.isDefault
                 ? "bg-linear-240 from-[#3dae70] via-green-950 to-black"
                 : "bg-black before:absolute before:inset-0 before:-z-10 before:rounded-2xl before:bg-linear-240 before:from-[#3dae70] before:via-green-950 before:to-black before:opacity-0 before:transition-opacity before:duration-700 hover:before:opacity-100",
-            )
-            }>
+            )}
+          >
             <div className="flex relative z-50 flex-col gap-4 items-start">
               <span className="font-bold text-foreground/50 text-sm md:text-base lg:text-lg">
                 {x.title}
@@ -69,8 +67,7 @@ export default function PricingSection({ pricingData }: PricingSectionProps) {
             <Button
               size="lg"
               variant={x.isDefault ? "default" : "outline"}
-              className=
-              "flex items-center text-sm gap-2 px-4 py-6 font-extrabold cursor-pointer"
+              className="flex items-center text-sm gap-2 px-4 py-6 font-extrabold cursor-pointer"
             >
               <Magnifier className="-rotate-45" size={12} />
               Start a Project

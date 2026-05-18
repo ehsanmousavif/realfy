@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Button } from "../../manual/button";
+import { Button } from "../../component/button";
 import { Play } from "@solar-icons/react-perf/category/style/Bold";
 // import { PlayCircle } from '@solar-icons/react'
 

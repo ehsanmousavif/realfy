@@ -1,19 +1,14 @@
-import {
-  CheckCircle,
-  KeyMinimalistic2,
-} from "@solar-icons/react-perf/category/style/LineDuotone";
-import { FieldLabel, FieldSet } from "../../field";
-import { Input } from "../../input";
+import { FieldLabel, FieldSet } from "../../component/field";
+import { Input } from "../../component/input";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "../../select";
-import { Textarea } from "../../textarea";
-import { Button } from "../../manual/button";
-import Image from "next/image";
+} from "../../component/select";
+import { Textarea } from "../../component/textarea";
+import { Button } from "../../component/button";
 import { IconUpper } from "../../root/icon-upper-sections";
 
 const projectFields = [
@@ -89,7 +84,7 @@ export function Cta() {
   return (
     <div className="w-full max-w-5xl mx-auto mt-20 md:mt-40 border border-accent rounded-2xl p-4 md:p-6 flex flex-col gap-8 overflow-hidden">
       <div className="max-w-sm mx-auto">
-        <IconUpper icon="/images/landing/ajib.svg" title="Start a Project" />
+        <IconUpper icon="/images/landing/key-2.svg" title="Start a Project" />
       </div>
       <span className="text-2xl md:text-4xl -mt-4 font-bold text-center">
         Tell Me About Your Project
@@ -198,10 +193,10 @@ export function Cta() {
         />
       </div>
       <Button
-        size={"lg"}
-        className="relative overflow-hidden rounded-full px-6 py-3 flex items-center justify-center gap-2 border-2 text-foreground"
+        className="relative overflow-hidden rounded-full p-6 flex items-center justify-center gap-2 border-2 text-foreground transition-all duration-300"
         style={{
-          background: `linear-gradient(#000, #000) padding-box, radial-gradient(circle, rgb(153, 225, 206), rgba(153, 225, 206, 0.1)) border-box`,
+          background:
+            "linear-gradient(#000, #000) padding-box, radial-gradient(circle, rgb(153, 225, 206), rgba(153, 225, 206, 0.1)) border-box",
           backgroundOrigin: "border-box",
           backgroundClip: "padding-box, border-box",
         }}

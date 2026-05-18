@@ -3,11 +3,11 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
+} from "@/components/ui/component/accordion";
 import { NoEntryIcon, PayPal, TickIcon } from "./_icon";
 import Image from "next/image";
 import { QuestionSquare } from "@solar-icons/react-perf/category/style/LineDuotone";
-import { Separator } from "../../separator";
+import { Separator } from "../../component/separator";
 import { IconUpper } from "../../root/icon-upper-sections";
 
 const items = [

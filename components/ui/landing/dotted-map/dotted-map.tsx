@@ -46,7 +46,7 @@ export function GlobalMap() {
           alt="map desktop"
           src="/images/landing/map.svg"
           fill
-          className="hidden md:block object-contain md:-mt-10"
+          className="hidden md:block w-full object-contain md:-mt-10 max-w-7xl mx-auto"
         />
         <Image
           alt="map mobile"

@@ -3,9 +3,9 @@ import { Testimonials } from "./testimonials-base/testimonials-base";
 import { IconUpper } from "../../root/icon-upper-sections";
 
 const images = [
-  "/images/landing/shot-1.png",
-  "/images/landing/shot-2.png",
-  "/images/landing/shot-3.png",
+  "/images/landing/shot-1.webp",
+  "/images/landing/shot-2.webp",
+  "/images/landing/shot-3.webp",
 ];
 
 export function TestimonialsBase() {
