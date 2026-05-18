@@ -1,5 +1,5 @@
-import { Marquee } from "../../component/marquee"
 import Image from "next/image"
+import { Marquee } from "../../component/magic-ui/marquee"
 
 interface Props {
     images: string[]
@@ -9,9 +9,9 @@ export function CategoryBase({ images }: Props) {
         <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
             <Marquee pauseOnHover className="[--duration:50s]">
                 {images.map((x) => (
-                    <div className="relative md:w-80 w-60 aspect-9/6pro cursor-pointer overflow-hidden"
+                    <div className="relative md:w-80 w-60 aspect-9/6 pro cursor-pointer overflow-hidden"
                         key={x} >
-                        <Image className="rounded-xl" fill alt="" src={x} />
+                        <Image className="rounded-xl"  fill alt="" src={x} />
                     </div>
                 ))
                 }

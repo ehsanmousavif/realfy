@@ -1,4 +1,4 @@
-import { Marquee } from "@/components/ui/component/marquee";
+import { Marquee } from "@/components/ui/component/magicui/marquee";
 import Image from "next/image";
 
 type Props = {

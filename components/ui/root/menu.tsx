@@ -1,4 +1,4 @@
-import { Button } from "../component/button";
+import { Button } from "../component/shadcn/button";
 
 
 export const menuItems = [

@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { Button } from "../../component/button";
 import { Play } from "@solar-icons/react-perf/category/style/Bold";
+import { Button } from "../../component/shadcn/button";
 // import { PlayCircle } from '@solar-icons/react'
 
 export function IntroductionVideo() {

@@ -1,14 +1,9 @@
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/component/accordion";
+
 import { NoEntryIcon, PayPal, TickIcon } from "./_icon";
 import Image from "next/image";
-import { QuestionSquare } from "@solar-icons/react-perf/category/style/LineDuotone";
-import { Separator } from "../../component/separator";
+import { Separator } from "../../component/shadcn/separator";
 import { IconUpper } from "../../root/icon-upper-sections";
+import { AccordionItem, AccordionTrigger, AccordionContent, Accordion } from "../../component/shadcn/accordion";
 
 const items = [
   {

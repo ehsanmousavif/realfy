@@ -1,8 +1,8 @@
 "use client";
 
 import { Magnifier } from "@solar-icons/react-perf/LineDuotone";
-import OrbitImages from "../../component/orbit-images";
-import { Button } from "../../component/button";
+import OrbitImages from "../../component/react-bits/orbit-images";
+import { Button } from "../../component/shadcn/button";
 export function HeroSection() {
   const images = [
     { src: "/images/landing/short-1.webp", size: 170 },
@@ -28,7 +28,7 @@ export function HeroSection() {
           images={images}
           shape="ellipse"
           radiusX={600}
-          radiusY={300  }
+          radiusY={300}
           rotation={0}
           duration={90}
           responsive={true}

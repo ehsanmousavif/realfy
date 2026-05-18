@@ -7,9 +7,9 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-} from "@/components/ui/component/carousel";
+} from "@/components/ui/component/shadcn/carousel";
 
-import { AspectRatio } from "@/components/ui/component/aspect-ratio";
+import { AspectRatio } from "@/components/ui/component/shadcn/aspect-ratio";
 import { Bookmark, Share } from "@solar-icons/react-perf/category/style/Bold";
 
 const images = [

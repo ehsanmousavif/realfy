@@ -5,7 +5,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import Image from "next/image";
 import React from "react";
 import { ArrowLeft, ArrowRight } from "@solar-icons/react-perf/LineDuotone";
-import { Backlight } from "../../component/back-light";
+import { Backlight } from "../../component/magicui/back-light";
 
 type PropType = {
   images: string[];
