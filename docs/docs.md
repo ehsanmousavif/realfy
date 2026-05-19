@@ -2,20 +2,20 @@
 
 ## 0. Document Information
 
-| Field                    | Value                                                                                       |
-| ------------------------ | ------------------------------------------------------------------------------------------- |
-| Task Name                | Convert Figma Landing Page to Next.js                                                       |
-| Design Source            | Figma                                                                                       |
-| Figma Frame Name         | `✅ landing page`                                                                           |
-| Figma URL                | `https://www.figma.com/design/ZVgnOlGbPmDpizmcOJtpu2/Mr-Abasi-Project--Copy-?node-id=1-263` |
-| Figma File Key           | `ZVgnOlGbPmDpizmcOJtpu2`                                                                    |
-| Figma Node ID            | `1:263`                                                                                     |
-| Reference Frame Size     | `1601px × 11823px`                                                                          |
-| Main Background Color    | `#040404`                                                                                   |
-| Expected Developer Level | Mid-level frontend developer                                                                |
-| Delivery Model           | Full project handoff; no Pull Request required                                              |
-| Document Status          | Locked after approval                                                                       |
-| Main Goal                | Define the expected technical, visual, structural, and delivery output                      |
+| Field | Value |
+|---|---|
+| Task Name | Convert Figma Landing Page to Next.js |
+| Design Source | Figma |
+| Figma Frame Name | `✅ landing page` |
+| Figma URL | `https://www.figma.com/design/ZVgnOlGbPmDpizmcOJtpu2/Mr-Abasi-Project--Copy-?node-id=1-263` |
+| Figma File Key | `ZVgnOlGbPmDpizmcOJtpu2` |
+| Figma Node ID | `1:263` |
+| Reference Frame Size | `1601px × 11823px` |
+| Main Background Color | `#040404` |
+| Expected Developer Level | Mid-level frontend developer |
+| Delivery Model | Full project handoff; no Pull Request required |
+| Document Status | Locked after approval |
+| Main Goal | Define the expected technical, visual, structural, and delivery output |
 
 This document is the main execution standard for the task.
 
@@ -731,13 +731,13 @@ tailwind-merge
 
 These packages are only allowed when there is a real need:
 
-| Need                | Allowed Package        | Usage Condition                                        | Documentation                                                    |
-| ------------------- | ---------------------- | ------------------------------------------------------ | ---------------------------------------------------------------- |
-| Animation           | `motion`               | Only if real animation is needed and CSS is not enough | `https://motion.dev/docs/react`                                  |
-| Carousel            | `embla-carousel-react` | Only if the section is a real carousel                 | `https://www.embla-carousel.com/docs/get-started/react`          |
-| Form handling       | `react-hook-form`      | Only if there is a real form                           | `https://react-hook-form.com/get-started`                        |
-| Validation          | `zod`                  | Only for real validation                               | `https://zod.dev/`                                               |
-| Headless primitives | Radix UI               | Only through shadcn or when required                   | `https://www.radix-ui.com/primitives/docs/overview/introduction` |
+| Need | Allowed Package | Usage Condition | Documentation |
+|---|---|---|---|
+| Animation | `motion` | Only if real animation is needed and CSS is not enough | `https://motion.dev/docs/react` |
+| Carousel | `embla-carousel-react` | Only if the section is a real carousel | `https://www.embla-carousel.com/docs/get-started/react` |
+| Form handling | `react-hook-form` | Only if there is a real form | `https://react-hook-form.com/get-started` |
+| Validation | `zod` | Only for real validation | `https://zod.dev/` |
+| Headless primitives | Radix UI | Only through shadcn or when required | `https://www.radix-ui.com/primitives/docs/overview/introduction` |
 
 ### 16.3 Forbidden Packages Without Approval
 
@@ -777,21 +777,21 @@ Related documentation:
 
 ## 17. Package and Resource Matrix by Section
 
-| Section             | Main Need                | Allowed Tools                           | External Resource Rule                                          |
-| ------------------- | ------------------------ | --------------------------------------- | --------------------------------------------------------------- |
-| Hero                | Layout, media, CTA       | `next/image`, `Button`, Solar Icons     | Aceternity/Magic UI only for matching background or hero effect |
-| Collaboration Strip | Static or marquee strip  | CSS first, Magic UI if needed           | Magic UI Marquee only if behavior matches Figma                 |
-| Intro Quote         | Typography, inline media | CSS + `next/image`                      | React Bits text effect only if Figma has text animation         |
-| Services            | Cards/grid/icons         | `Card` if useful, Solar Icons           | Aceternity/Magic UI card effects only if visually required      |
-| Portfolio           | Grid/media cards         | `next/image`, custom card               | React Bits gallery only if Figma needs it                       |
-| Process             | Steps/cards/icons        | CSS + reusable components + Solar Icons | No extra library by default                                     |
-| Category Showcase   | Tabs/filter visual       | `Tabs` only if real interaction exists  | No external package unless needed                               |
-| Featured Works      | Media grid               | `next/image`                            | External galleries only if they match Figma                     |
-| Pricing             | Package cards            | `Card`, `Button`, `Badge`               | Aceternity pricing block can be used only as reference          |
-| Testimonials        | Quote cards              | Custom card                             | Aceternity/Magic UI testimonial style only if adapted to Figma  |
-| FAQ                 | Accordion                | `shadcn Accordion`                      | Aceternity FAQ block only as reference                          |
-| CTA                 | Button/contact action    | `Button`, Solar Icons                   | Aceternity/Magic UI CTA only as reference                       |
-| Footer              | Links/social items       | Semantic HTML + Solar Icons             | No template copy                                                |
+| Section | Main Need | Allowed Tools | External Resource Rule |
+|---|---|---|---|
+| Hero | Layout, media, CTA | `next/image`, `Button`, Solar Icons | Aceternity/Magic UI only for matching background or hero effect |
+| Collaboration Strip | Static or marquee strip | CSS first, Magic UI if needed | Magic UI Marquee only if behavior matches Figma |
+| Intro Quote | Typography, inline media | CSS + `next/image` | React Bits text effect only if Figma has text animation |
+| Services | Cards/grid/icons | `Card` if useful, Solar Icons | Aceternity/Magic UI card effects only if visually required |
+| Portfolio | Grid/media cards | `next/image`, custom card | React Bits gallery only if Figma needs it |
+| Process | Steps/cards/icons | CSS + reusable components + Solar Icons | No extra library by default |
+| Category Showcase | Tabs/filter visual | `Tabs` only if real interaction exists | No external package unless needed |
+| Featured Works | Media grid | `next/image` | External galleries only if they match Figma |
+| Pricing | Package cards | `Card`, `Button`, `Badge` | Aceternity pricing block can be used only as reference |
+| Testimonials | Quote cards | Custom card | Aceternity/Magic UI testimonial style only if adapted to Figma |
+| FAQ | Accordion | `shadcn Accordion` | Aceternity FAQ block only as reference |
+| CTA | Button/contact action | `Button`, Solar Icons | Aceternity/Magic UI CTA only as reference |
+| Footer | Links/social items | Semantic HTML + Solar Icons | No template copy |
 
 Related documentation:
 
@@ -978,11 +978,11 @@ Forbidden visual changes:
 
 Visual acceptance levels:
 
-| Level    | Meaning                                                                                             | Result          |
-| -------- | --------------------------------------------------------------------------------------------------- | --------------- |
-| Critical | A section, layout, image, text, or major visual structure is missing or wrong                       | Must be fixed   |
-| Major    | The section exists but spacing, hierarchy, card layout, or responsive behavior is visibly different | Must be fixed   |
-| Minor    | Small browser rendering difference that does not change the visual composition                      | Can be accepted |
+| Level | Meaning | Result |
+|---|---|---|
+| Critical | A section, layout, image, text, or major visual structure is missing or wrong | Must be fixed |
+| Major | The section exists but spacing, hierarchy, card layout, or responsive behavior is visibly different | Must be fixed |
+| Minor | Small browser rendering difference that does not change the visual composition | Can be accepted |
 
 Related documentation:
 
@@ -1058,13 +1058,13 @@ public/images/landing/
 
 Export format rules:
 
-| Asset Type             | Format                                          |
-| ---------------------- | ----------------------------------------------- |
-| Photos                 | `.webp` or original suitable web format         |
-| Solar icons            | React components from `@solar-icons/react-perf` |
-| Non-Solar custom icons | `.svg` only if approved                         |
-| Transparent images     | `.png`                                          |
-| Complex backgrounds    | `.webp` or `.png` based on visual quality       |
+| Asset Type | Format |
+|---|---|
+| Photos | `.webp` or original suitable web format |
+| Solar icons | React components from `@solar-icons/react-perf` |
+| Non-Solar custom icons | `.svg` only if approved |
+| Transparent images | `.png` |
+| Complex backgrounds | `.webp` or `.png` based on visual quality |
 
 Rules:
 
@@ -1528,56 +1528,45 @@ The final handoff must include:
 # Final Handoff Note
 
 ## Summary
-
 -
 
 ## Implemented Sections
-
 -
 
 ## Project Structure
-
 -
 
 ## Installed Packages
-
 | Package | Reason | Where Used | Official Docs |
-| ------- | ------ | ---------- | ------------- |
-|         |        |            |               |
+|---|---|---|---|
+| | | | |
 
 ## External UI Resources Used
-
 | Resource | Component/Block | Where Used | Reason | Official Docs |
-| -------- | --------------- | ---------- | ------ | ------------- |
-|          |                 |            |        |               |
+|---|---|---|---|---|
+| | | | | |
 
 ## Solar Icons Used
-
 | Icon | Import Path | Where Used | Notes |
-| ---- | ----------- | ---------- | ----- |
-|      |             |            |       |
+|---|---|---|---|
+| | | | |
 
 ## Exported Assets
-
 -
 
 ## Screenshots
-
 - Desktop:
 - Mobile:
 
 ## Validation Commands
-
 - `pnpm lint`: passed/failed
 - `pnpm check-types`: passed/failed
 - `pnpm build`: passed/failed
 
 ## Known Differences from Figma
-
 -
 
 ## Blockers or Notes
-
 -
 ```
 
@@ -1683,25 +1672,25 @@ Related documentation:
 
 ## 36. Locked Technical Decisions
 
-| Topic                 | Decision                                             |
-| --------------------- | ---------------------------------------------------- |
-| Framework             | Next.js App Router                                   |
-| Language              | TypeScript                                           |
-| UI Base               | shadcn/ui                                            |
-| Styling               | Tailwind CSS + CSS Variables                         |
-| Icons                 | Solar Icons via `@solar-icons/react-perf`            |
-| Required Icon Style   | Solar Line Duotone / Linear Duotone visual style     |
-| Image Handling        | `next/image`                                         |
-| Component Strategy    | Section-based                                        |
-| Data Strategy         | Constants-first                                      |
-| Rendering             | Server Component by default                          |
-| Animation             | CSS-first, package only if justified                 |
+| Topic | Decision |
+|---|---|
+| Framework | Next.js App Router |
+| Language | TypeScript |
+| UI Base | shadcn/ui |
+| Styling | Tailwind CSS + CSS Variables |
+| Icons | Solar Icons via `@solar-icons/react-perf` |
+| Required Icon Style | Solar Line Duotone / Linear Duotone visual style |
+| Image Handling | `next/image` |
+| Component Strategy | Section-based |
+| Data Strategy | Constants-first |
+| Rendering | Server Component by default |
+| Animation | CSS-first, package only if justified |
 | External UI Resources | Aceternity UI, React Bits, Magic UI only when useful |
-| Asset Path            | `public/images/landing`                              |
-| Main Container        | Close to `1296px` on desktop                         |
-| Background            | `#040404`                                            |
-| Delivery              | Complete project handoff; no PR required             |
-| Final Validation      | `pnpm lint`, `pnpm check-types`, `pnpm build`        |
+| Asset Path | `public/images/landing` |
+| Main Container | Close to `1296px` on desktop |
+| Background | `#040404` |
+| Delivery | Complete project handoff; no PR required |
+| Final Validation | `pnpm lint`, `pnpm check-types`, `pnpm build` |
 
 Related documentation:
 
