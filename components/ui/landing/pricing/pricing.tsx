@@ -85,7 +85,7 @@ export function Pricing() {
     return <div className="mt-30 justify-center gap-8 px-4 w-full flex flex-col items-center max-w-7xl mx-auto">
         <IconUpper title="Pricing" icon={<DollarMinimalistic className='w-6 h-6' />
         } />
-        <span className="text-2xl md:text-4xl -mt-4 font-bold text-center">Choose your plane</span>
+        <h2 className="text-2xl md:text-4xl -mt-4 font-bold text-center">Choose your plan</h2>
         <PricingSection pricingData={pricingData} />
     </div>
 }

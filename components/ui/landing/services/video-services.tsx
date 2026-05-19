@@ -1,21 +1,19 @@
-"use client";
-
-const images = [
-  "/images/landing/wall.jpg",
-  "/images/landing/pic-1.jpg",
-  "/images/landing/pic-2.webp",
+const videos = [
+  "https://www.youtube.com/embed/9s0_YQtbEEY",
+  "https://www.youtube.com/embed/pmSiuAWza6o",
+  "https://www.youtube.com/embed/sRWcJrMTtMI",
 ];
 import { DangerCircle } from "@solar-icons/react-perf/category/style/LineDuotone";
 import { Carousel } from "./carousel";
 import { IconUpper } from "../../root/icon-upper-sections";
-export function Services() {
+export function VideoServices() {
   return (
     <div className="mt-30 mx-auto flex flex-col items-center justify-center gap-8 w-full">
       <IconUpper title="Featured Work" icon={"/images/landing/star.svg"} />
-      <span className="text-2xl md:text-4xl -mt-4 font-bold text-center">
+      <h2 className="text-2xl md:text-4xl -mt-4 font-bold text-center">
         My Best Video Projects
-      </span>
-      <Carousel images={images} />
+      </h2>
+      <Carousel videos={videos} />
       <div className="flex flex-row items-start justify-center gap-3">
         <DangerCircle className="w-6 h-6 md:w-4 md:h-4 shrink-0" />
         <p className="text-foreground/60 leading-relaxed">

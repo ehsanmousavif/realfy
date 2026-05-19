@@ -2,6 +2,7 @@ import { Magnifier } from "@solar-icons/react-perf/LineDuotone";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { Button } from "../component/shadcn/button";
+import Link from "next/link";
 
 export type PricingItem = {
   id: number;
@@ -65,12 +66,15 @@ export default function PricingSection({ pricingData }: PricingSectionProps) {
             </div>
 
             <Button
+              asChild
               size="lg"
               variant={x.isDefault ? "default" : "outline"}
               className="flex items-center text-sm gap-2 px-4 py-6 font-extrabold cursor-pointer"
             >
-              <Magnifier className="-rotate-45" size={12} />
-              Start a Project
+              <Link href={"#"}>
+                <Magnifier className="-rotate-45" size={12} />
+                Start a Project
+              </Link>
             </Button>
           </div>
         );

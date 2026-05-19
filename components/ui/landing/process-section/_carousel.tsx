@@ -8,6 +8,7 @@ import Image from "next/image";
 import { Bookmark, Share } from "@solar-icons/react-perf/category/style/Bold";
 import { Carousel, CarouselContent, CarouselItem } from "../component/shadcn/carousel";
 import { AspectRatio } from "../component/shadcn/aspect-ratio";
+import { Button } from "../component/shadcn/button";
 
 const images = [
   "/images/landing/old-man.png",
@@ -36,22 +37,23 @@ export default function CarouselSection() {
               className="pl-4 basis-[40%] md:basis-[20%]"
             >
               <div className="group relative overflow-hidden rounded-2xl">
-                <AspectRatio ratio={9 / 16}>
-                  <Image
-                    src={src}
-                    alt={`image-${index}`}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </AspectRatio>
+                  <AspectRatio ratio={9 / 16}>
+                    <Image
+                      src={src}
+                      alt={`image-${index}`}
+                      fill
+                      sizes="auto"
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </AspectRatio>
                 <div className="absolute bottom-0 right-0 flex items-center justify-center gap-3 bg-linear-to-t to-transparent p-4 opacity-0 transition-all duration-300 group-hover:opacity-100 ">
-                  <button className="flex size-10 items-center justify-center rounded-full bg-white/10 backdrop-blur-md transition hover:bg-white/20">
+                  <Button aria-label="Save project" className="flex size-10 items-center justify-center rounded-full bg-white/10 backdrop-blur-md transition hover:bg-white/20">
                     <Bookmark className="size-5 text-white" />
-                  </button>
+                  </Button>
 
-                  <button className="flex size-10 items-center justify-center rounded-full bg-white/10 backdrop-blur-md transition hover:bg-white/20">
+                  <Button aria-label="share project" className="flex size-10 items-center justify-center rounded-full bg-white/10 backdrop-blur-md transition hover:bg-white/20">
                     <Share className="size-5 text-white" />
-                  </button>
+                  </Button>
                 </div>
               </div>
             </CarouselItem>

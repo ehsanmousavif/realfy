@@ -1,51 +1,21 @@
 import Image from "next/image";
 import { Marquee } from "../component/magic-ui/marquee";
-const reviews = [
+const Images = [
   {
     id: `1`,
     jobTitle: "A Person",
     jobDescription: "Motion Project",
-    img: "/images/landing/pic-1.jpg",
+    img: "/images/landing/mf.png",
   },
   {
     id: `2`,
     jobTitle: "Nike",
     jobDescription: "Video project",
-    img: "/images/landing/mf.png",
-  },
-  {
-    id: `3`,
-    jobTitle: "Nike",
-    jobDescription: "Video project",
-    img: "/images/landing/mf.png",
-  },
-  {
-    id: `4`,
-    jobTitle: "Nike",
-    jobDescription: "Video project",
-    img: "/images/landing/mf.png",
-  },
-  {
-    id: `5`,
-    jobTitle: "Nike",
-    jobDescription: "Video project",
-    img: "/images/landing/mf.png",
-  },
-  {
-    id: `6`,
-    jobTitle: "Nike",
-    jobDescription: "Video project",
-    img: "/images/landing/mf.png",
-  },
-  {
-    id: `7`,
-    jobTitle: "Nike",
-    jobDescription: "Video project",
-    img: "/images/landing/mf.png",
+    img: "/images/landing/pic-1.jpg",
   },
 ];
 
-const firstRow = reviews;
+const firstRow = Images;
 
 const ReviewCard = ({
   img,
@@ -63,6 +33,7 @@ const ReviewCard = ({
       <div className="flex items-center gap-2 sm:gap-3">
         <div className="relative w-16 h-16 shrink-0">
           <Image
+            sizes="64px"
             fill
             src={img}
             alt={jobDescription}

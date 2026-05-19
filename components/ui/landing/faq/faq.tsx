@@ -6,40 +6,34 @@ import { AccordionItem, AccordionTrigger, AccordionContent, Accordion } from "..
 import { Separator } from "../component/shadcn/separator";
 
 const items = [
+  { value: "billing", trigger: "How does the collaboration process work?", content: "We offer monthly and annual subscription plans. Billing is charged at the beginning of each cycle, and you can cancel anytime. All plans include automatic backups, 24/7 support, and unlimited team members.", },
   {
-    value: "billing",
-    trigger: "How does the collaboration process work?",
+    value: "delivery_time",
+    trigger: "How long does it take to complete a video project?",
     content:
-      "We offer monthly and annual subscription plans. Billing is charged at the beginning of each cycle, and you can cancel anytime. All plans include automatic backups, 24/7 support, and unlimited team members.",
+      "It depends on the complexity of the project. Short-form videos usually take 2–5 days, while larger commercial or YouTube edits may take 1–2 weeks.",
   },
   {
-    value: "security",
-    trigger: "Is my data secure?",
+    value: "specialization",
+    trigger: "What type of videos do you specialize in?",
     content:
-      "Payments can be made securely through PayPal, credit/debit cards (Visa & MasterCard), or other agreed international payment methods. To start a project, a percentage of the total cost is required upfront to confirm the booking. The remaining balance is paid after project completion, before final delivery. This structure ensures clarity, security, and a smooth collaboration for both sides.",
+      "I specialize in short-form content, YouTube videos, commercial ads, and motion graphics tailored for brands, creators, and social media growth.",
   },
   {
-    value: "integration",
-    trigger: "How long does a project take?",
+    value: "revisions",
+    trigger: "Can I request revisions after the first draft?",
     content:
-      "We integrate with 500+ popular tools including Slack, Zapier, Salesforce, HubSpot, and more. You can also build custom integrations using our REST API and webhooks.",
+      "Yes, each project includes revision rounds to ensure the final result matches your vision and brand style.",
   },
-
-  {
-    value: "hello world",
-    trigger: "How many revisions are included?",
-    content:
-      "We integrate with 500+ opular tools including Slack, Zapier, Salesforce, HubSpot, and more. You can also build custom integrations using our REST API and webhooks.",
-  },
-];
+]
 
 export function Faq() {
   return (
     <div className=" mt-40 flex flex-col items-center justify-center gap-8 w-full">
       <IconUpper title="FAQ" icon="/images/landing/faq.svg" />
-      <span className="text-2xl md:text-4xl -mt-4 font-bold text-center">
+      <h2 className="text-2xl md:text-4xl -mt-4 font-bold text-center">
         Frequently Asked Questions{" "}
-      </span>
+      </h2>
 
       <Accordion
         type="single"

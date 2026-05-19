@@ -1,9 +1,16 @@
-'use client';
+"use client";
 
-import { useMemo, useEffect, useRef, useState, FC, ReactNode } from 'react';
-import { motion, useMotionValue, useTransform, animate } from 'motion/react';
-import "./orbit-images.css"
-function generateEllipsePath(cx: number, cy: number, rx: number, ry: number): string {
+import { useMemo, useEffect, useRef, useState, FC, ReactNode } from "react";
+import { motion, useMotionValue, useTransform, animate } from "motion/react";
+import "./orbit-images.css";
+import type { MotionValue } from "motion/react";
+import Image from "next/image";
+function generateEllipsePath(
+  cx: number,
+  cy: number,
+  rx: number,
+  ry: number,
+): string {
   return `M ${cx - rx} ${cy} A ${rx} ${ry} 0 1 0 ${cx + rx} ${cy} A ${rx} ${ry} 0 1 0 ${cx - rx} ${cy}`;
 }
 
@@ -16,7 +23,12 @@ function generateSquarePath(cx: number, cy: number, size: number): string {
   return `M ${cx - h} ${cy - h} L ${cx + h} ${cy - h} L ${cx + h} ${cy + h} L ${cx - h} ${cy + h} Z`;
 }
 
-function generateRectanglePath(cx: number, cy: number, w: number, h: number): string {
+function generateRectanglePath(
+  cx: number,
+  cy: number,
+  w: number,
+  h: number,
+): string {
   const hw = w / 2;
   const hh = h / 2;
   return `M ${cx - hw} ${cy - hh} L ${cx + hw} ${cy - hh} L ${cx + hw} ${cy + hh} L ${cx - hw} ${cy + hh} Z`;
@@ -28,9 +40,15 @@ function generateTrianglePath(cx: number, cy: number, size: number): string {
   return `M ${cx} ${cy - height / 1.5} L ${cx + hs} ${cy + height / 3} L ${cx - hs} ${cy + height / 3} Z`;
 }
 
-function generateStarPath(cx: number, cy: number, outerR: number, innerR: number, points: number): string {
+function generateStarPath(
+  cx: number,
+  cy: number,
+  outerR: number,
+  innerR: number,
+  points: number,
+): string {
   const step = Math.PI / points;
-  let path = '';
+  let path = "";
   for (let i = 0; i < 2 * points; i++) {
     const r = i % 2 === 0 ? outerR : innerR;
     const angle = i * step - Math.PI / 2;
@@ -38,7 +56,7 @@ function generateStarPath(cx: number, cy: number, outerR: number, innerR: number
     const y = cy + r * Math.sin(angle);
     path += i === 0 ? `M ${x} ${y}` : ` L ${x} ${y}`;
   }
-  return path + ' Z';
+  return path + " Z";
 }
 
 function generateHeartPath(cx: number, cy: number, size: number): string {
@@ -46,13 +64,24 @@ function generateHeartPath(cx: number, cy: number, size: number): string {
   return `M ${cx} ${cy + 12 * s} C ${cx - 20 * s} ${cy - 5 * s}, ${cx - 12 * s} ${cy - 18 * s}, ${cx} ${cy - 8 * s} C ${cx + 12 * s} ${cy - 18 * s}, ${cx + 20 * s} ${cy - 5 * s}, ${cx} ${cy + 12 * s}`;
 }
 
-function generateInfinityPath(cx: number, cy: number, w: number, h: number): string {
+function generateInfinityPath(
+  cx: number,
+  cy: number,
+  w: number,
+  h: number,
+): string {
   const hw = w / 2;
   const hh = h / 2;
   return `M ${cx} ${cy} C ${cx + hw * 0.5} ${cy - hh}, ${cx + hw} ${cy - hh}, ${cx + hw} ${cy} C ${cx + hw} ${cy + hh}, ${cx + hw * 0.5} ${cy + hh}, ${cx} ${cy} C ${cx - hw * 0.5} ${cy + hh}, ${cx - hw} ${cy + hh}, ${cx - hw} ${cy} C ${cx - hw} ${cy - hh}, ${cx - hw * 0.5} ${cy - hh}, ${cx} ${cy}`;
 }
 
-function generateWavePath(cx: number, cy: number, w: number, amplitude: number, waves: number): string {
+function generateWavePath(
+  cx: number,
+  cy: number,
+  w: number,
+  amplitude: number,
+  waves: number,
+): string {
   const pts: string[] = [];
   const segs = waves * 20;
   const hw = w / 2;
@@ -66,7 +95,7 @@ function generateWavePath(cx: number, cy: number, w: number, amplitude: number, 
     const y = cy - Math.sin((i / segs) * waves * 2 * Math.PI) * amplitude;
     pts.push(`L ${x} ${y}`);
   }
-  return pts.join(' ') + ' Z';
+  return pts.join(" ") + " Z";
 }
 
 interface OrbitItemProps {
@@ -76,11 +105,20 @@ interface OrbitItemProps {
   path: string;
   itemSize: number;
   rotation: number;
-  progress: any;
+  progress: MotionValue<number>;
   fill: boolean;
 }
 
-const OrbitItem: FC<OrbitItemProps> = ({ item, index, totalItems, path, itemSize, rotation, progress, fill }) => {
+const OrbitItem: FC<OrbitItemProps> = ({
+  item,
+  index,
+  totalItems,
+  path,
+  itemSize,
+  rotation,
+  progress,
+  fill,
+}) => {
   const itemOffset = fill ? (index / totalItems) * 100 : 0;
 
   const offsetDistance = useTransform(progress, (p: number) => {
@@ -95,8 +133,8 @@ const OrbitItem: FC<OrbitItemProps> = ({ item, index, totalItems, path, itemSize
         width: itemSize,
         height: itemSize,
         offsetPath: `path("${path}")`,
-        offsetRotate: '0deg',
-        offsetAnchor: 'center center',
+        offsetRotate: "0deg",
+        offsetAnchor: "center center",
         offsetDistance,
       }}
     >
@@ -108,7 +146,17 @@ const OrbitItem: FC<OrbitItemProps> = ({ item, index, totalItems, path, itemSize
 interface OrbitImagesProps {
   images?: (string | { src: string; size: number })[];
   altPrefix?: string;
-  shape?: 'ellipse' | 'circle' | 'square' | 'rectangle' | 'triangle' | 'star' | 'heart' | 'infinity' | 'wave' | 'custom';
+  shape?:
+    | "ellipse"
+    | "circle"
+    | "square"
+    | "rectangle"
+    | "triangle"
+    | "star"
+    | "heart"
+    | "infinity"
+    | "wave"
+    | "custom";
   customPath?: string;
   baseWidth?: number;
   radiusX?: number;
@@ -119,7 +167,7 @@ interface OrbitImagesProps {
   rotation?: number;
   duration?: number;
   itemSize?: number;
-  direction?: 'normal' | 'reverse';
+  direction?: "normal" | "reverse";
   fill?: boolean;
   width?: number | string;
   height?: number | string;
@@ -137,8 +185,8 @@ interface OrbitImagesProps {
 
 const OrbitImages: FC<OrbitImagesProps> = ({
   images = [],
-  altPrefix = 'Orbiting image',
-  shape = 'ellipse',
+  altPrefix = "Orbiting image",
+  shape = "ellipse",
   customPath,
   baseWidth = 1400,
   radiusX = 700,
@@ -149,21 +197,17 @@ const OrbitImages: FC<OrbitImagesProps> = ({
   rotation = -8,
   duration = 40,
   itemSize = 64,
-  direction = 'normal',
+  direction = "normal",
   fill = true,
   width = 100,
   height = 100,
-  className = '',
+  className = "",
   showPath = false,
-  pathColor = 'rgba(0,0,0,0.1)',
+  pathColor = "rgba(0,0,0,0.1)",
   pathWidth = 2,
-  easing = 'linear',
   paused = false,
   centerContent,
   responsive = false,
-  w,
-  h,
-
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [scale, setScale] = useState(1);
@@ -173,30 +217,74 @@ const OrbitImages: FC<OrbitImagesProps> = ({
 
   const path = useMemo(() => {
     switch (shape) {
-      case 'circle':
+      case "circle":
         return generateCirclePath(designCenterX, designCenterY, radius);
-      case 'ellipse':
-        return generateEllipsePath(designCenterX, designCenterY, radiusX, radiusY);
-      case 'square':
+      case "ellipse":
+        return generateEllipsePath(
+          designCenterX,
+          designCenterY,
+          radiusX,
+          radiusY,
+        );
+      case "square":
         return generateSquarePath(designCenterX, designCenterY, radius * 2);
-      case 'rectangle':
-        return generateRectanglePath(designCenterX, designCenterY, radiusX * 2, radiusY * 2);
-      case 'triangle':
+      case "rectangle":
+        return generateRectanglePath(
+          designCenterX,
+          designCenterY,
+          radiusX * 2,
+          radiusY * 2,
+        );
+      case "triangle":
         return generateTrianglePath(designCenterX, designCenterY, radius * 2);
-      case 'star':
-        return generateStarPath(designCenterX, designCenterY, radius, radius * starInnerRatio, starPoints);
-      case 'heart':
+      case "star":
+        return generateStarPath(
+          designCenterX,
+          designCenterY,
+          radius,
+          radius * starInnerRatio,
+          starPoints,
+        );
+      case "heart":
         return generateHeartPath(designCenterX, designCenterY, radius * 2);
-      case 'infinity':
-        return generateInfinityPath(designCenterX, designCenterY, radiusX * 2, radiusY * 2);
-      case 'wave':
-        return generateWavePath(designCenterX, designCenterY, radiusX * 2, radiusY, 3);
-      case 'custom':
-        return customPath || generateCirclePath(designCenterX, designCenterY, radius);
+      case "infinity":
+        return generateInfinityPath(
+          designCenterX,
+          designCenterY,
+          radiusX * 2,
+          radiusY * 2,
+        );
+      case "wave":
+        return generateWavePath(
+          designCenterX,
+          designCenterY,
+          radiusX * 2,
+          radiusY,
+          3,
+        );
+      case "custom":
+        return (
+          customPath || generateCirclePath(designCenterX, designCenterY, radius)
+        );
       default:
-        return generateEllipsePath(designCenterX, designCenterY, radiusX, radiusY);
+        return generateEllipsePath(
+          designCenterX,
+          designCenterY,
+          radiusX,
+          radiusY,
+        );
     }
-  }, [shape, customPath, designCenterX, designCenterY, radiusX, radiusY, radius, starPoints, starInnerRatio]);
+  }, [
+    shape,
+    customPath,
+    designCenterX,
+    designCenterY,
+    radiusX,
+    radiusY,
+    radius,
+    starPoints,
+    starInnerRatio,
+  ]);
 
   useEffect(() => {
     if (!responsive || !containerRef.current) return;
@@ -214,37 +302,53 @@ const OrbitImages: FC<OrbitImagesProps> = ({
 
   useEffect(() => {
     if (paused) return;
-    const controls = animate(progress, direction === 'reverse' ? -100 : 100, {
-      duration,
-      ease: easing,
-      repeat: Infinity,
-      repeatType: 'loop',
-    });
-    return () => controls.stop();
-  }, [progress, duration, easing, direction, paused]);
 
-  const containerWidth = responsive ? '100%' : (typeof width === 'number' ? width : '100%');
-  const containerHeight = responsive ? 'auto' : (typeof height === 'number' ? height : (typeof width === 'number' ? width : 'auto'));
+    const controls = animate(
+      progress,
+      [0, direction === "reverse" ? -100 : 100],
+      {
+        duration,
+        ease: "linear",
+        repeat: Infinity,
+        repeatType: "loop",
+      },
+    );
+
+    return () => controls.stop();
+  }, [progress, duration, direction, paused]);
+
+  const containerWidth = responsive
+    ? "100%"
+    : typeof width === "number"
+      ? width
+      : "100%";
+  const containerHeight = responsive
+    ? "auto"
+    : typeof height === "number"
+      ? height
+      : typeof width === "number"
+        ? width
+        : "auto";
 
   const items = images.map((imgData, index) => {
-    const isObject = typeof imgData === 'object' && imgData !== null;
+    const isObject = typeof imgData === "object" && imgData !== null;
     const src = isObject ? imgData.src : imgData;
-    const size = isObject ? imgData.size : (itemSize || 64);
+    const size = isObject ? imgData.size : itemSize || 64;
 
     return {
       src,
       size,
       element: (
-        <img
+        <Image
           key={src}
           src={src}
           alt={`${altPrefix} ${index + 1}`}
           draggable={false}
-          className="orbit-image !rounded-2xl"
+          className="orbit-image rounded-2xl"
           width={size}
           height={size}
         />
-      )
+      ),
     };
   });
 
@@ -255,16 +359,22 @@ const OrbitImages: FC<OrbitImagesProps> = ({
       style={{
         width: containerWidth,
         height: containerHeight,
-        aspectRatio: responsive ? '1 / 1' : undefined,
+        aspectRatio: responsive ? "1 / 1" : undefined,
       }}
       aria-hidden="true"
     >
       <div
-        className={responsive ? 'orbit-scaling-container orbit-scaling-container--responsive rounded-3xl' : 'orbit-scaling-container'}
+        className={
+          responsive
+            ? "orbit-scaling-container orbit-scaling-container--responsive rounded-3xl"
+            : "orbit-scaling-container"
+        }
         style={{
-          width: responsive ? baseWidth : '100%',
-          height: responsive ? baseWidth : '100%',
-          transform: responsive ? `translate(-50%, -50%) scale(${scale})` : undefined,
+          width: responsive ? baseWidth : "100%",
+          height: responsive ? baseWidth : "100%",
+          transform: responsive
+            ? `translate(-50%, -50%) scale(${scale})`
+            : undefined,
         }}
       >
         <div
@@ -278,7 +388,12 @@ const OrbitImages: FC<OrbitImagesProps> = ({
               viewBox={`0 0 ${baseWidth} ${baseWidth}`}
               className="orbit-path-svg"
             >
-              <path d={path} fill="none" stroke={pathColor} strokeWidth={pathWidth / scale} />
+              <path
+                d={path}
+                fill="none"
+                stroke={pathColor}
+                strokeWidth={pathWidth / scale}
+              />
             </svg>
           )}
 
@@ -299,9 +414,7 @@ const OrbitImages: FC<OrbitImagesProps> = ({
       </div>
 
       {centerContent && (
-        <div className="orbit-center-content">
-          {centerContent}
-        </div>
+        <div className="orbit-center-content">{centerContent}</div>
       )}
     </div>
   );

@@ -1,5 +1,3 @@
-"use client";
-
 import { Global } from "@solar-icons/react-perf/category/style/LineDuotone";
 import Image from "next/image";
 import { CountryMarquee } from "./country-marquee";
@@ -41,18 +39,19 @@ export function GlobalMap() {
           <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-linear-to-r from-black to-transparent" />
           <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-linear-to-l from-black to-transparent" />
         </div>
-
         <Image
           alt="map desktop"
           src="/images/landing/map.svg"
           fill
+          sizes="100vw"
           className="hidden md:block w-full object-contain md:-mt-10 max-w-7xl mx-auto"
         />
         <Image
           alt="map mobile"
           src="/images/landing/map-mob.svg"
           fill
-          className="block md:hidden   mt-20"
+          sizes="100vw"
+          className="block md:hidden mt-20"
         />
       </div>
     </div>

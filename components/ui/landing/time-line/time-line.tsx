@@ -27,15 +27,15 @@ const dt = [
         id: 4,
     },
     {
-        title: "Production",
+        title: "Review & Revisions",
         description:
-            "The video is edited and produced with a focus on quality, pacing, and storytelling.",
+            "You receive a preview and request revisions if needed to fine-tune the final result.",
         id: 5,
     },
     {
-        title: "Production",
+        title: "Final Delivery",
         description:
-            "The video is edited and produced with a focus on quality, pacing, and storytelling.",
+            "The final files are delivered in the required formats, ready for publishing.",
         id: 6,
     },
 ];

@@ -2,16 +2,15 @@
 
 import { cn } from "@/lib/utils";
 import useEmblaCarousel from "embla-carousel-react";
-import Image from "next/image";
 import React from "react";
 import { ArrowLeft, ArrowRight } from "@solar-icons/react-perf/LineDuotone";
 import { Backlight } from "../component/magic-ui/back-light";
 
 type PropType = {
-  images: string[];
+  videos: string[];
 };
 
-export function Carousel({ images }: PropType) {
+export function Carousel({ videos }: PropType) {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: "center",
     loop: true,
@@ -64,7 +63,7 @@ export function Carousel({ images }: PropType) {
 
       <div ref={emblaRef} className="overflow-hidden rounded-2xl">
         <div className="flex ">
-          {images.map((image, index) => {
+          {videos.map((video, index) => {
             const distance = Math.abs(index - selectedIndex);
             const isCenter = distance === 0;
 
@@ -80,14 +79,15 @@ export function Carousel({ images }: PropType) {
                     opacity: isCenter ? 1 : 0.4,
                   }}
                 >
-                  <Backlight blur={10} className="">
-                    <div className="my-16 w-full shadow-xl/30 shadow-black/40 max-w-200 aspect-video rounded-xl md:max-h-150">
-                      <Image
-                        src={image}
-                        alt={`Slide ${index + 1}`}
-                        fill
-                        className="object-cover rounded-2xl"
-                        priority={index === 0}
+                  <Backlight blur={50} className="">
+                    <div className="my-16 w-full shadow-xl  shadow-xl/30 shadow-black/40 max-w-200 aspect-video rounded-xl md:max-h-150">
+                      <iframe
+                        src={video}
+                        className="w-full h-full rounded-xl"
+                        title="Introduction video"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        loading="lazy"
                       />
                     </div>
                   </Backlight>

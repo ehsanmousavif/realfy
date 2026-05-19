@@ -19,9 +19,9 @@ export const PayPal = ({ height, width }: Props) => {
             <text
                 x="78"
                 y="44"
-                font-family="Arial, Helvetica, sans-serif"
-                font-size="40"
-                font-weight="700"
+                fontFamily="Arial, Helvetica, sans-serif"
+                fontSize="40"
+                fontWeight="700"
                 fill="#253B80"
             >
                 Pay
@@ -30,9 +30,9 @@ export const PayPal = ({ height, width }: Props) => {
             <text
                 x="150"
                 y="44"
-                font-family="Arial, Helvetica, sans-serif"
-                font-size="40"
-                font-weight="700"
+                fontFamily="Arial, Helvetica, sans-serif"
+                fontSize="40"
+                fontWeight="700"
                 fill="#009CDE"
             >
                 Pal

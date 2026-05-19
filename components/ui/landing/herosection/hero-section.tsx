@@ -3,6 +3,7 @@
 import { Magnifier } from "@solar-icons/react-perf/LineDuotone";
 import OrbitImages from "../component/react-bits/orbit-images";
 import { Button } from "../component/shadcn/button";
+import Link from "next/link";
 
 export function HeroSection() {
   const images = [
@@ -59,19 +60,22 @@ export function HeroSection() {
       </div>
 
       <div className="relative z-10 flex flex-col items-center px-4 gap-6">
-        <span className="text-2xl md:text-4xl font-bold text-center">
+        <h1 className="text-2xl md:text-4xl font-bold text-center">
           Alireza Abbasi
-        </span>
+        </h1>
         <span className="md:text-lg text-foreground/50 text-center">
           Creative Video Editor & Content Producer for Global Brands
         </span>
         <Button
+          asChild
           variant={"ghost"}
           size={"lg"}
           className="border-2 border-accent p-6 flex items-center gap-4 bg-black"
         >
-          <Magnifier className="-rotate-45" color="white" />
-          <p className="text-base font-bold">start a project</p>
+          <Link href={"#"}>
+            <Magnifier className="-rotate-45" color="white" />
+            <p className="text-base font-bold">start a project</p>
+          </Link>
         </Button>
       </div>
     </div>

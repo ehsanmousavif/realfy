@@ -1,5 +1,3 @@
-"use client";
-
 import { UserCircle } from "@solar-icons/react-perf/category/style/LineDuotone";
 import { IntroductionVideo } from "./Introduction-video";
 import Image from "next/image";
@@ -9,9 +7,9 @@ export function AboutUs() {
   return (
     <div className="mt-30 max-w-4xl mx-auto flex flex-col items-center justify-center gap-10 px-4 w-full relative">
       <IconUpper title="Who Am I" icon={<UserCircle size={20} />} />
-      <span className="text-2xl md:text-4xl -mt-4 font-bold text-center">
+      <h2 className="text-2xl md:text-4xl -mt-4 font-bold text-center">
         About Me
-      </span>
+      </h2>
       <div className="flex flex-col items-center gap-2">
         <span className="text-center text-sm text-foreground/70">
           I’m Alireza Abbasi, a video editor and content producer with 22+ years

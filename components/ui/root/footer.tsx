@@ -1,6 +1,7 @@
 import { Copyright } from "@solar-icons/react-perf/category/style/Bold";
 import { Instagram, LinkedIn, Twitter, YouTube } from "./_icons";
 import { menuItems } from "./menu";
+import Link from "next/link";
 
 const socials = [
   {
@@ -30,9 +31,13 @@ export function Footer() {
 
           <div className="flex flex-row flex-wrap max-w-60 items-center justify-center md:flex-nowrap md:max-w-full gap-4 md:gap-8 text-foreground/60 ">
             {menuItems.map((x, idx) => (
-              <span key={idx} className="transition-opacity hover:opacity-100">
+              <Link
+                key={idx}
+                className="transition-opacity hover:opacity-100"
+                href={x.path}
+              >
                 {x.label}
-              </span>
+              </Link>
             ))}
           </div>
         </div>
