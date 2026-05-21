@@ -4,7 +4,6 @@ import { CountryMarquee } from "./country-marquee";
 import { IconUpper } from "@/components/ui/root/icon-upper-sections";
 
 export function GlobalMap() {
-  
   return (
     <div className="mt-30 mx-auto flex flex-col items-center justify-center gap-8 p-0 md:px-4 w-full">
       <IconUpper title="Global Reach" icon={<Global className="w-6 h-6" />} />
