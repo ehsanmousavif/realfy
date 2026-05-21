@@ -1,33 +1,33 @@
-import { AboutUs } from "@/components/ui/landing/about/about";
-import { PortfolioSection } from "@/components/ui/landing/categories-section/portfolio-section";
-import { CollaborationStrip } from "@/components/ui/landing/collaboration/collaboration-strip";
-import { Cta } from "@/components/ui/landing/cta/cta";
-import { GlobalMap } from "@/components/ui/landing/dotted-map/dotted-map";
-import { Faq } from "@/components/ui/landing/faq/faq";
-import { HeroSection } from "@/components/ui/landing/herosection/hero-section";
-import TextWithImages from "@/components/ui/landing/intro-quote/intro-quote";
-import { Pricing } from "@/components/ui/landing/pricing/pricing";
-import { VideoProductionProcess } from "@/components/ui/landing/process-section/video-production-process";
-import { VideoServices } from "@/components/ui/landing/services/video-services";
-import { TestimonialsBase } from "@/components/ui/landing/testimonials/testimonials";
-import TimeLine from "@/components/ui/landing/time-line/time-line";
+import { HeroSection } from "@/components/ui/sections/01.hero-section/hero-section";
+import { CollaborationStrip } from "@/components/ui/sections/02.collaboration/collaboration-strip";
+import IntroQuote from "@/components/ui/sections/03.intro-quote/intro-quote";
+import { LongVideo } from "@/components/ui/sections/04.long-video/video-services";
+import { ShortVideo } from "@/components/ui/sections/05.short-video/video-production-process";
+import { AboutUs } from "@/components/ui/sections/06.about/about";
+import { Portfolio } from "@/components/ui/sections/07.portfolio/portfolio";
+import { GlobalMap } from "@/components/ui/sections/08.map/dotted-map";
+import TimeLine from "@/components/ui/sections/09.time-line/time-line";
+import { Pricing } from "@/components/ui/sections/10.pricing/pricing";
+import { Testimonials } from "@/components/ui/sections/11.testimonials/testimonials";
+import { Faq } from "@/components/ui/sections/12.faq/faq";
+import { Cta } from "@/components/ui/sections/13.cta/cta";
 
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center">
       <HeroSection />
       <CollaborationStrip />
-      <TextWithImages />
-      <VideoServices />
-      <VideoProductionProcess />
+      <IntroQuote />
+      <LongVideo />
+      <ShortVideo />
       <AboutUs />
-      <PortfolioSection />
+      <Portfolio />
       <GlobalMap />
       <TimeLine />
       <Pricing />
-      <TestimonialsBase />
+      <Testimonials />
       <Faq />
       <Cta />
     </div>
-  )
+  );
 }

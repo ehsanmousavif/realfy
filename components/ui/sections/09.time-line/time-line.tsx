@@ -1,6 +1,6 @@
 import { QuestionCircle } from "@solar-icons/react-perf/category/style/LineDuotone";
-import { TimeLineBase } from "./time-line-base";
 import { IconUpper } from "../../root/icon-upper-sections";
+import { TimeLineItems } from "./time-line-items";
 const dt = [
     {
         title: "Project Request",
@@ -51,7 +51,7 @@ export default function TimeLine() {
             <span className="text-2xl md:text-4xl  font-bold text-center">
                 My Work Process
             </span>
-            <TimeLineBase data={dt} />
+            <TimeLineItems data={dt} />
         </div>
     );
 }

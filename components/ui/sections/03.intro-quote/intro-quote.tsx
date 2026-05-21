@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function TextWithImages() {
+export default function IntroQuote() {
   return (
     <section className="text-white mt-30 flex flex-col items-center justify-center relative">
       <div className="max-w-3xl mx-auto text-center">

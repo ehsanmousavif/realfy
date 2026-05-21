@@ -80,8 +80,8 @@ export const pricingData: PricingItem[] = [
         ],
     },
 ];
-export function Pricing() {
 
+export function Pricing() {
     return <div className="mt-30 justify-center gap-8 px-4 w-full flex flex-col items-center max-w-7xl mx-auto">
         <IconUpper title="Pricing" icon={<DollarMinimalistic className='w-6 h-6' />
         } />

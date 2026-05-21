@@ -4,7 +4,7 @@ import { Marquee } from "../component/magic-ui/marquee";
 interface Props {
   images: string[];
 }
-export function CategoryBase({ images }: Props) {
+export function PortfolioItems({ images }: Props) {
   return (
     <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
       <Marquee pauseOnHover className="[--duration:50s]">

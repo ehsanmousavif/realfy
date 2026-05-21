@@ -2,9 +2,10 @@
 
 import { cn } from "@/lib/utils";
 import useEmblaCarousel from "embla-carousel-react";
-import React from "react";
+import { useEffect, useState } from "react";
 import { ArrowLeft, ArrowRight } from "@solar-icons/react-perf/LineDuotone";
 import { Backlight } from "../component/magic-ui/back-light";
+import ReactPlayer from "react-player";
 
 type PropType = {
   videos: string[];
@@ -18,9 +19,24 @@ export function Carousel({ videos }: PropType) {
     containScroll: "trimSnaps",
   });
 
-  const [selectedIndex, setSelectedIndex] = React.useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+  const [selectedIndex, setSelectedIndex] = useState(0);
 
-  React.useEffect(() => {
+  useEffect(() => {
+    if (!emblaApi) return;
+
+    emblaApi.on("pointerDown", () => {
+      setIsDragging(true);
+    });
+
+    emblaApi.on("pointerUp", () => {
+      setTimeout(() => {
+        setIsDragging(false);
+      }, 50);
+    });
+  }, [emblaApi]);
+
+  useEffect(() => {
     if (!emblaApi) return;
 
     const onSelect = () => {
@@ -70,24 +86,28 @@ export function Carousel({ videos }: PropType) {
             return (
               <div
                 key={index}
-                className="flex-[0_0_70%] md:flex-[0_0_60%] flex items-center justify-center"
+                className="flex-[0_0_70%] md:flex-[0_0_60%] w-full flex items-center justify-center"
               >
                 <div
                   className={cn("w-full transition-all duration-500 ease-out")}
                   style={{
-                    transform: `scale(${isCenter ? 1 : 0.95})`,
+                    transform: `scale(${isCenter ? 1 : 0.88})`,
                     opacity: isCenter ? 1 : 0.4,
                   }}
                 >
                   <Backlight blur={50} className="">
-                    <div className="my-16 w-full shadow-xl  shadow-xl/30 shadow-black/40 max-w-200 aspect-video rounded-xl md:max-h-150">
-                      <iframe
+                    <div
+                      className={cn(
+                        "my-16 shadow-xl shadow-xl/30 shadow-black/40 aspect-video rounded-xl flex md:max-h-150 overflow-hidden relative w-full ",
+                        isDragging && "pointer-events-none",
+                      )}
+                    >
+                      <ReactPlayer
                         src={video}
-                        className="w-full h-full rounded-xl"
-                        title="Introduction video"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                        loading="lazy"
+                        width="100%"
+                        height="100%"
+                        controls
+                        playing={false}
                       />
                     </div>
                   </Backlight>

@@ -1,12 +1,12 @@
 import Image from "next/image";
-import { Marquee } from "../../component/magic-ui/marquee";
+import { Marquee } from "../component/magic-ui/marquee";
 
 type Props = {
   images: string[];
 };
 
 
-export function Testimonials({ images }: Props) {
+export function TestimonialsItems({ images }: Props) {
   const Row = images.slice(0, Math.ceil(images.length / 2));
 
 
