@@ -1,17 +1,17 @@
 "use client";
 
 import { IconUpper } from "../../root/icon-upper-sections";
-import { Button } from "../component/shadcn/button";
-import { FieldLabel, FieldSet } from "../component/shadcn/field";
-import { Input } from "../component/shadcn/input";
+import { Button } from "../components/shadcn/button";
+import { FieldLabel, FieldSet } from "../components/shadcn/field";
+import { Input } from "../components/shadcn/input";
 import {
   SelectTrigger,
   Select,
   SelectContent,
   SelectItem,
   SelectValue,
-} from "../component/shadcn/select";
-import { Textarea } from "../component/shadcn/textarea";
+} from "../components/shadcn/select";
+import { Textarea } from "../components/shadcn/textarea";
 
 const projectFields = [
   {

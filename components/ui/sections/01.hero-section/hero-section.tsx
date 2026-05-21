@@ -1,8 +1,8 @@
 "use client";
 
 import { Magnifier } from "@solar-icons/react-perf/LineDuotone";
-import OrbitImages from "../component/react-bits/orbit-images";
-import { Button } from "../component/shadcn/button";
+import OrbitImages from "../components/react-bits/orbit-images";
+import { Button } from "../components/shadcn/button";
 import Link from "next/link";
 
 export function HeroSection() {

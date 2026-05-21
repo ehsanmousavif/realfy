@@ -6,9 +6,9 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-} from "../component/shadcn/carousel";
-import { AspectRatio } from "../component/shadcn/aspect-ratio";
-import { Button } from "../component/shadcn/button";
+} from "../components/shadcn/carousel";
+import { AspectRatio } from "../components/shadcn/aspect-ratio";
+import { Button } from "../components/shadcn/button";
 
 const images = [
   "/images/landing/old-man.png",

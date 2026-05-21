@@ -2,8 +2,8 @@
 import { NoEntryIcon, PayPal, TickIcon } from "./_icon";
 import Image from "next/image";
 import { IconUpper } from "../../root/icon-upper-sections";
-import { AccordionItem, AccordionTrigger, AccordionContent, Accordion } from "../component/shadcn/accordion"
-import { Separator } from "../component/shadcn/separator";
+import { AccordionItem, AccordionTrigger, AccordionContent, Accordion } from "../components/shadcn/accordion"
+import { Separator } from "../components/shadcn/separator";
 
 const items = [
   { value: "billing", trigger: "How does the collaboration process work?", content: "We offer monthly and annual subscription plans. Billing is charged at the beginning of each cycle, and you can cancel anytime. All plans include automatic backups, 24/7 support, and unlimited team members.", },

@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import useEmblaCarousel from "embla-carousel-react";
 import { useEffect, useState } from "react";
 import { ArrowLeft, ArrowRight } from "@solar-icons/react-perf/LineDuotone";
-import { Backlight } from "../component/magic-ui/back-light";
+import { Backlight } from "../components/magic-ui/back-light";
 import ReactPlayer from "react-player";
 
 type PropType = {

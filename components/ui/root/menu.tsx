@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Button } from "../sections/component/shadcn/button";
+import { Button } from "../sections/components/shadcn/button";
 
 export const menuItems = [
   { label: "Home", path: "/" },

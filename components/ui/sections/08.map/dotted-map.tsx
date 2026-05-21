@@ -35,7 +35,6 @@ export function GlobalMap() {
 
       <div className="relative aspect-video w-full flex flex-col gap-4">
         <div className="max-w-xs md:max-w-3xl  mx-auto relative">
-          
           <CountryMarquee />
 
           <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-linear-to-r from-black to-transparent" />
